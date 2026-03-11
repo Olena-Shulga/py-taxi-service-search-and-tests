@@ -135,6 +135,7 @@ class DriverListView(LoginRequiredMixin, generic.ListView):
             return queryset.filter(
                 username__icontains=form.cleaned_data["username"]
             )
+        return queryset
 
 
 class DriverDetailView(LoginRequiredMixin, generic.DetailView):

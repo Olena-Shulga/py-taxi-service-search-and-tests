@@ -27,7 +27,7 @@ class PrivateManufacturerTests(TestCase):
         )
         self.client.force_login(self.user)
 
-    def test_retrieve_literary_formats(self):
+    def test_retrieve_manufacturers(self):
         response = self.client.get(MANUFACTURER_URL)
         self.assertEqual(response.status_code, 200)
         manufacturers = Manufacturer.objects.all()
